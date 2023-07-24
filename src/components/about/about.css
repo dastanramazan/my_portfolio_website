@@ -1,0 +1,180 @@
+.about__container {
+    grid-template-columns: 3fr 9fr; /*The grid is set to have two columns: the first column is set to take up 3 fractions of the available space, while the second column takes up 9 fractions. The fr unit is a flexible unit used in grid layouts, where it represents a fraction of the available space.
+    */
+    column-gap: 1.875rem; /*Additionally, the column-gap property sets the size of the gap between the columns to 1.875rem (rem stands for "root em" and is a unit of length relative to the font size of the root element). This will create a visible space between the columns in the grid.*/
+}
+
+/* the data in box on the right from avatar 2 */
+.about__data {
+    padding: 1.875rem;
+    background-color: var(--container-color);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    /* grid-template-columns: repeat(2, 1fr); The grid-template-columns property is used to define the number and width of columns in a CSS grid layout. In the example you provided, repeat(2, 1fr) means that the grid will have two columns with equal width, each column taking up 1 fraction unit of the available space. The 1fr unit means that the column width will be determined by dividing the available space equally among the columns. */
+    column-gap:  1.875rem;
+    align-items: flex-start;
+    position: relative; 
+}
+
+.about__data::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid var(--container-color);
+    position: absolute;
+    left: -0.93rem;
+    top: 20%;
+
+}
+
+.about__description {
+    margin-bottom: 1rem;
+    text-align:justify;
+}
+
+/* Unnecessary part */
+/* .about__skills {
+    row-gap: 1.25rem;
+} */
+
+/* .skills__titles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.skills__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.skills__number {
+    line-height: 1.2;
+}
+
+.skills__bar,
+.skills__percentage {
+    height: 7px;
+    border-radius: 0.25rem;
+}
+
+.skills__bar {
+    background-color: #f1f1f1;
+  
+}
+
+
+.skills__percentage {
+    display: block;
+    
+} */
+
+/* Color yellow of the bar */
+/* .development {
+    width: 90%;
+    background-color: rgb(255, 209, 92);
+}
+
+.ui__design {
+    width: 90%;
+    background-color: rgb(255, 76, 96);
+}
+
+.photography {
+    width: 90%;
+    background-color: rgb(108, 108, 299);
+} */
+
+/* Icons and results in numbers */
+.about__boxes {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.875rem;
+    margin-top: 4.35rem;
+}
+
+.about__box {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.about__icon {
+    font-size: var(--h1-font-size);
+    color: #ed4747;
+}
+
+.about__title {
+    font-size: 1.875rem;
+}
+
+/* Responsive on 1024px */
+@media screen and (max-width: 1024px) {
+    .about__container {
+      grid-template-columns: 720px;
+      justify-content: center;
+      row-gap: 1.875rem;
+    }
+
+    .about__data::before {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        left: 49%;
+        top: -20%;
+    }
+
+    .about__img {
+        justify-self: center;
+    }
+    
+    .about__box {
+        flex-direction: column;
+        row-gap: .5rem;
+        text-align: center;
+    }
+  }
+
+  /* Responsive on 768px */
+  @media screen and (max-width: 768px) {
+    .about__container {
+        grid-template-columns: 350px;
+    }
+
+    .about__data::before {
+        left: 47%;
+    }
+
+    .about__data {
+        grid-template-columns: 1fr;
+        row-gap: 1.875rem;
+    }
+
+    .about__boxes {
+        grid-template-columns: repeat(2, 150px);
+        row-gap: 1.5rem;
+        justify-content: center;
+    }
+  }
+
+  /* Responsive on 576px */
+  @media screen and (max-width: 576px) {
+    .about__container {
+        grid-template-columns: 320px;
+        
+    }
+
+}
+
+  /* Responsive on 350px */
+@media screen and (max-width: 350px) {
+    .about__container {
+        grid-template-columns: 320px;
+        
+    }
+
+    .about__boxes {
+        grid-template-columns: 1fr;
+    }
+
+}

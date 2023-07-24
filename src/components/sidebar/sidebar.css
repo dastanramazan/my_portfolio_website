@@ -1,0 +1,87 @@
+
+/* Position of lefthand side bar */
+.aside {
+    position: fixed; /*fixed positions the element relative to the viewport, so it stays in place when the user scrolls. */
+    left: 0; /* position the element in the top left corner of the viewport. */
+    top: 0;
+    background: var(--body-color); /* sets the background color of the element to a custom CSS variable called --body-color, which is defined elsewhere in the CSS. */
+    border-right: 1px solid rgba(0, 0, 0, 0.05); /* adds a solid 1-pixel border to the right side of the element, with a slightly transparent black color. */
+    padding: 2.5rem;  /* (i.e., 2.5 times the font size) on all sides of the element's content. */
+    width: 110px;
+    min-height: 100vh; /* 100vh sets the minimum height of the element to 100% of the viewport height, so the element always takes up the full height of the screen. */
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10; /*sets the z-index of the element to 10, which determines its position on the z-axis in relation to other elements. An element with a higher z-index will be positioned on top of an element with a lower z-index, if they overlap.*/
+    
+
+}
+
+
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem; /*property sets the gap between each row in the column, in this case, it sets the gap to 1rem.*/
+}
+
+/* make size of icon bigger */
+.nav__link {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+    transition: .3s;
+}
+
+.nav__link:hover {
+    color: hsl(43, 100%, 68%)
+}
+
+/* Make copyright vertical */
+.copyright {
+    color: hsl(245, 15%, 65%);
+    font-size: var(--small-font-size);
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+}
+/* Burger vhen you resize it */
+.nav__toggle {
+    position: fixed;
+    top: 1.25rem;
+    left: 1.87rem;
+    cursor: pointer;
+    height: 40px;
+    width: 45px;
+    background-color: var(--body-color);
+   /* Frame around the burger */
+    border: 1px solid #e8dfec;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: .3s;
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .aside {
+      left: -110px;
+    }
+
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__toggle-open {
+        left: 140px;
+    }
+
+    .show-menu {
+        left: 0;
+    }
+    
+  }
+
+
+  
