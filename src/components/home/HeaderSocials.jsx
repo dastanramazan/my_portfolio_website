@@ -4,7 +4,7 @@ const HeaderSocials = () => {
   return (
     <div className="home__socials">
         <a href="https://www.linkedin.com/in/drinit1984/" className="home__social-link" target="_blank" rel="noopener noreferrer" > 
-            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-linkedin"></i> 
         </a> 
        
         <a href="https://www.instagram.com/dr_in_it/" className="home__social-link" target="_blank" rel="noopener noreferrer"> 
