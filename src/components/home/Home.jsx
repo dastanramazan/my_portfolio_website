@@ -11,12 +11,12 @@ const Home = () => {
       <div className="intro">
        
         <h5 className="home__hi"><i class="emoji-waving-hand"></i> Hi, I am</h5>
-        <h1 className="home__name">DOS-DEV</h1>
-        <span className="home__education">I am a Front-End Developer</span>
+        <h1 className="home__name">DastaN</h1>
+        <span className="home__education">I am a Software Engineer</span>
 
         <HeaderSocials />
 
-        <a href="#contact" className="btn">Hire Me</a>
+        <a href="#contact" className="btn">Contact Me</a>
       
       
         <ScrollDown />

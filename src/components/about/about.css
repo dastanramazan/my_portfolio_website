@@ -4,6 +4,15 @@
     column-gap: 1.875rem; /*Additionally, the column-gap property sets the size of the gap between the columns to 1.875rem (rem stands for "root em" and is a unit of length relative to the font size of the root element). This will create a visible space between the columns in the grid.*/
 }
 
+
+.about__container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+ 
+}
+
 /* the data in box on the right from avatar 2 */
 .about__data {
     padding: 1.875rem;

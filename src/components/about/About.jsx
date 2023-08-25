@@ -1,6 +1,6 @@
 import React from 'react';
 import "./about.css";
-import Image from "../../assets/avatar-2.svg";
+import Image from "../../assets/myavatar_1.jpg";
 import AboutBox from './AboutBox';
 
 const About = () => {
@@ -13,7 +13,7 @@ const About = () => {
 {/* About */}
         <div className="about__data grid">
               <div className="about__info">
-                <p className="about__description">I am Dastan, web developer from London, United Kingdom. I have rich experience in web site design and building and customization, also I am good at WordPress.</p>
+                <p className="about__description">Hello, I'm Dastan, a Software Engineer excited about using technology to make the world better. In the past 4 years, I've learned about lots of different technologies, from making websites to working with complex systems. I'm good at finding efficient ways to do things, staying organized, and paying attention to technical details. I enjoy working with teams to create new things that help push technology forward.</p>
                 <a href="/#" className="btn">Download CV</a>
               </div>
           

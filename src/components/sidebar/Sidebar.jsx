@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./sidebar.css";
-import Logo from "../../assets/logo_transparent.png" //Logo change
+import Logo from "../../assets/wolflogos.jpeg" //Logo change
 
 
 const Sidebar = () => {
