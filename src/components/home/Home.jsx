@@ -13,7 +13,7 @@ const Home = () => {
            
 
         <h5 className="home__hi"><i class="emoji-waving-hand"></i> Hi, I am</h5>
-        <h1 className="home__name">DastaN</h1>
+        <h1 className="home__name">DasTaN</h1>
         <span className="home__education">I am a Software Engineer</span>
 
         <HeaderSocials />
