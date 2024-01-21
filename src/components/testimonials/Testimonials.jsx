@@ -18,10 +18,10 @@ const data = [
   {
     id: 1,
     image: Image1,
-    title: "John Doe",
-    subtitle: "Product designer at Dribble",
+    title: "Ilya",
+    subtitle: "Designer at Animator",
     comment:
-      "I enjoy working with the theme and learn so much. You       guys make the process fun and interesting. Good luck! 👍",
+      "I enjoy working with the Dastan. You make the process fun and interesting. Good luck! 👍",
   },
   {
     id: 2,

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./sidebar.css";
-import Logo from "../../assets/wolflogos.jpeg" //Logo change
+import Logo from "../../assets/my_logo_wolf.png" //Logo change
 
 
 const Sidebar = () => {
@@ -45,11 +45,11 @@ const Sidebar = () => {
                                 </a>
                             </li>
 
-                            <li className="nav__item">
+                            {/* <li className="nav__item">
                                 <a href="#blog" className="nav__link">
                                     <i className="icon-note"></i>
                                 </a>
-                            </li>
+                            </li> */}
 
                             <li className="nav__item">
                                 <a href="#contact" className="nav__link">

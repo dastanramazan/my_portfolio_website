@@ -1,6 +1,6 @@
 import React from 'react'
 import "./home.css";
-import Me from "../../assets/programming.svg";
+// import Me from "../../assets/Monogram_Typography Logo.gif";
 import HeaderSocials from './HeaderSocials';
 import ScrollDown from './ScrollDown';
 // import Shapes from './Shapes';
@@ -10,6 +10,8 @@ const Home = () => {
       
       <div className="intro">
        
+           
+
         <h5 className="home__hi"><i class="emoji-waving-hand"></i> Hi, I am</h5>
         <h1 className="home__name">DastaN</h1>
         <span className="home__education">I am a Software Engineer</span>
@@ -18,21 +20,22 @@ const Home = () => {
 
         <a href="#contact" className="btn">Contact Me</a>
       
-      
+       
+
         <ScrollDown />
       </div>
               
         
        
 
-      <div className="img__container">
-         
-         <img src={Me} alt=""  />
-      
-      </div>
+            {/* <div className="img__container">
+              
+              <img src={Me} alt=""  />
+            
+            </div> */}
       
 
-      {/* <Shapes /> */}
+     
     </section>
   )
 }

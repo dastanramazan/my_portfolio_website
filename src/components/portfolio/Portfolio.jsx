@@ -20,7 +20,7 @@ const Portfolio = () => {
 
 {/* Filter the categories onClick={() =>  filterItem("Design")} */}
       <div className="work__filters">
-        <span className="work__item" onClick={() =>  setItems(Menu)}>Everything</span>
+        <span className="work__item" onClick={() =>  setItems(Menu)}>All</span>
         <span className="work__item" onClick={() =>  filterItem("Creative")}>Creative</span>
         <span className="work__item" onClick={() =>  filterItem("Art")}>Art</span>
         <span className="work__item" onClick={() =>  filterItem("Design")}>Design</span>

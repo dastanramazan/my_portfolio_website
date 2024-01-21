@@ -14,7 +14,7 @@ const About = () => {
         <div className="about__data grid">
               <div className="about__info">
                 <p className="about__description">Hello, I'm Dastan, a Software Engineer excited about using technology to make the world better. In the past 4 years, I've learned about lots of different technologies, from making websites to working with complex systems. I'm good at finding efficient ways to do things, staying organized, and paying attention to technical details. I enjoy working with teams to create new things that help push technology forward.</p>
-                <a href="/#" className="btn">Download CV</a>
+                <a href="https://drive.google.com/file/d/1JO5ea-EMcER-OMve2-TcWePBKA38vJx4/view?usp=drive_link" className="btn">Download CV</a>
               </div>
           
 {/* 1 part description of SKILLS */}
