@@ -2,7 +2,7 @@ import React from 'react'
 import "./home.css";
 // import Me from "../../assets/Monogram_Typography Logo.gif";
 import HeaderSocials from './HeaderSocials';
-import ScrollDown from './ScrollDown';
+// import ScrollDown from './ScrollDown';
 // import Shapes from './Shapes';
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
            
 
         <h5 className="home__hi"><i class="emoji-waving-hand"></i> Hi, I am</h5>
-        <h1 className="home__name">DasTaN</h1>
+        <h1 className="home__name">Dastan</h1>
         <span className="home__education">I am a Software Engineer</span>
 
         <HeaderSocials />
@@ -22,7 +22,7 @@ const Home = () => {
       
        
 
-        <ScrollDown />
+        {/* <ScrollDown /> */}
       </div>
               
         
