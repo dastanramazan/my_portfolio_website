@@ -1,9 +1,7 @@
 import React from 'react'
 import "./home.css";
-// import Me from "../../assets/Monogram_Typography Logo.gif";
+import Me from "../../assets/me.webp";
 import HeaderSocials from './HeaderSocials';
-// import ScrollDown from './ScrollDown';
-// import Shapes from './Shapes';
 const Home = () => {
   return (
     <section className="home container" id="home">
@@ -12,9 +10,9 @@ const Home = () => {
        
            
 
-        <h5 className="home__hi"><i class="emoji-waving-hand"></i> Hi, I am</h5>
-        <h1 className="home__name">Dastan</h1>
-        <span className="home__education">I am a Software Engineer</span>
+        <h5 className="home__hi"><i class="emoji-waving-hand"></i> Hello</h5>
+        <h1 className="home__name"> My name is Dastan</h1>
+        <span className="home__education">I'm creative Software Engineer based in the Woodlands, passionate about building scalable web applications.</span>
 
         <HeaderSocials />
 
@@ -22,17 +20,16 @@ const Home = () => {
       
        
 
-        {/* <ScrollDown /> */}
+      
       </div>
               
         
        
 
-            {/* <div className="img__container">
-              
-              <img src={Me} alt=""  />
-            
-            </div> */}
+             {/* Image container */}
+      <div className="img__container">
+        <img src={Me} alt="Dastan" />
+      </div>
       
 
      

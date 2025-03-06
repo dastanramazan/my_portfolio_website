@@ -7,7 +7,7 @@
     background: var(--body-color); /* sets the background color of the element to a custom CSS variable called --body-color, which is defined elsewhere in the CSS. */
     border-right: 1px solid rgba(0, 0, 0, 0.05); /* adds a solid 1-pixel border to the right side of the element, with a slightly transparent black color. */
     /* padding: 1rem;  (i.e., 2.5 times the font size) on all sides of the element's content. */
-    width: 120px;
+    width: 110px;
     min-height: 100vh; /* 100vh sets the minimum height of the element to 100% of the viewport height, so the element always takes up the full height of the screen. */
     display: flex; 
     flex-direction: column;
@@ -20,7 +20,7 @@
 .nav__list {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem; /*property sets the gap between each row in the column, in this case, it sets the gap to 1rem.*/
+    row-gap: 1.5rem; /*property sets the gap between each row in the column, in this case, it sets the gap to 1rem.*/
     
 }
 

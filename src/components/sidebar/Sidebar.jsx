@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./sidebar.css";
-import Logo from "../../assets/my_logo_wolf.png" //Logo change
+import Logo from "../../assets/logo_wolf.svg" //Logo change
 
 
 const Sidebar = () => {

@@ -10,7 +10,7 @@
   --first-color: hsl(353, 100%, 65%);
   --title-color: hsl(244, 24%, 26%);
   --text-color: hsl(244, 16%, 43%);
-  --body-color: hsl(258, 60%, 98%);
+  /* --body-color: hsl(258, 60%, 98%); */
   --container-color: #fff;
 /* This is a CSS code snippet that defines three custom CSS variables using the -- notation. These variables are then assigned to different HSL color values.
 
@@ -76,7 +76,7 @@ textarea {
 }
 
 body {
-  background-color:var(--body-color);
+  /* background-color:var(--body-color); */
   line-height: 1.7;
   color: var(--text-color);
 }
@@ -115,10 +115,10 @@ img {
 /* ===================== Reusable CSS Classes======================== */
 
 .container {
-  max-width: 1080px;
+  max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .grid {
