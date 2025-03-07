@@ -61,7 +61,7 @@ const Sidebar = () => {
                 </nav>
 
                 <div className="nav__footer">
-                    <span className="copyright">The Wolf in the Dev World</span>
+                    <span className="copyright">The Wolf in the Tech World</span>
                 </div>
             </aside>
 {/* Burger slides to be a menu */}

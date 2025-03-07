@@ -17,46 +17,7 @@ const About = () => {
                 <a href="https://drive.google.com/file/d/1JO5ea-EMcER-OMve2-TcWePBKA38vJx4/view?usp=drive_link" className="btn">Download CV</a>
               </div>
           
-{/* 1 part description of SKILLS */}
-          {/* <div className="about__skills grid"> */}
-            {/* <div className="skills__data">
-              <div className="skills__titles">
-                <h3 className="skills__name">Development</h3>
-                <span className="skills__number">90%</span>
-              </div>
 
-              <div className="skills__bar"></div>
-              <span className="skills__percentage development"></span>
-            </div> */}
-          
-{/* 2 part description of SKILLS */}
-          
-            {/* <div className="skills__data">
-              <div className="skills__titles">
-                <h3 className="skills__name">UI/UX design</h3>
-                <span className="skills__number">80%</span>
-              </div>
-
-              <div className="skills__bar"></div>
-              <span className="skills__percentage ui__design"></span>
-            </div> */}
-          
-{/* 3 part description of SKILLS */}
-          
-            {/* <div className="skills__data">
-              <div className="skills__titles">
-                <h3 className="skills__name">Photography</h3>
-                <span className="skills__number">60%</span>
-              </div>
-
-              <div className="skills__bar"></div>
-              <span className="skills__percentage photography"></span>
-            </div> */}
-          
-
-
-
-          {/* </div>  */}
         </div>
       </div>
 

@@ -118,7 +118,7 @@ img {
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  /* margin: 0 auto; */
+  /* margin: 0 auto; */ /*The margin: 0 auto; rule centers the container horizontally on the page by setting the left and right margins to auto. This is a common technique for centering block-level elements like divs or sections.*/
 }
 
 .grid {

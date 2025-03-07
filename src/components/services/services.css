@@ -1,7 +1,10 @@
 .services__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.875rem;
+    max-width: 85%;
+    margin: 0 auto;
 }
+
 
 .services__card {
     text-align: center;
@@ -9,11 +12,14 @@
     border-radius: var(--border-radius);
     background-color: var(--container-color);
     transition: all 0.3s ease-in-out;
+    width: 360px;
+    height: 400px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* Motion of the services cards */
 .services__card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 
 /* Make the card's color different */
