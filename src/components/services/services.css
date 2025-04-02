@@ -1,8 +1,10 @@
 .services__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.875rem;
-    max-width: 85%;
+    max-width: 40%;
     margin: 0 auto;
+    display: grid; /* Display the container as a grid */
+    justify-content: center; /* Center the grid items horizontally */
 }
 
 
@@ -11,11 +13,13 @@
     padding: 1.875rem;
     border-radius: var(--border-radius);
     background-color: var(--container-color);
-    transition: all 0.3s ease-in-out;
-    width: 360px;
-    height: 400px;
+    transition: all 0.8s ease-in-out;
+    width: 300px;
+    height: 350px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
+
+
 
 /* Motion of the services cards */
 .services__card:hover {
@@ -38,8 +42,33 @@
     box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
 }
 
+.services__card:nth-child(4) {
+    background-color: rgb(13, 119, 83);
+    box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+    margin-left: 55%; /* Shifts 5th card to the right */
+    margin-top: -70px; /* Adjusts the vertical position */
+    
+}
+
+.services__card:nth-child(5) {
+    background-color: rgb(13, 119, 83);
+    box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+    margin-left: 55%; /* Shifts 5th card to the right */
+    margin-top: -70px; /* Adjusts the vertical position */
+    
+}
+
+.services__card:nth-child(6) {
+    background-color: rgb(13, 119, 83);
+    box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+    margin-left: 55%; /* Shifts 5th card to the right */
+    margin-top: -70px; /* Adjusts the vertical position */
+    
+}
+
+
 .services__img {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .services__title {
@@ -49,6 +78,7 @@
 
 .services__description {
     color: #f8f8f8;
+    font-size: small;
 
 }
 
@@ -77,12 +107,66 @@
     .services__container {
         grid-template-columns: 310px;
     }
+
+    .services__card:nth-child(4) {
+        background-color: rgb(13, 119, 83);
+        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+        margin-left: 0; /* Shifts 5th card to the right */
+        margin-top: 0; /* Adjusts the vertical position */
+       
+        
+    }
+    
+    .services__card:nth-child(5) {
+        background-color: rgb(13, 119, 83);
+        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+        margin-left: 0; /* Shifts 5th card to the right */
+        margin-top: 0; /* Adjusts the vertical position */
+        
+       
+    }
+    
+    .services__card:nth-child(6) {
+        background-color: rgb(13, 119, 83);
+        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+        margin-left: 0; /* Shifts 5th card to the right */
+        margin-top: 0; /* Adjusts the vertical position */
+       
+        
+    }
 }
 
 /* Responsive on 350px */
 @media screen and (max-width: 350px) {
     .services__container {
         grid-template-columns: 1fr;
+        
+    }
+
+    .services__card:nth-child(4) {
+        background-color: rgb(13, 119, 83);
+        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+        margin-left: 0; /* Shifts 5th card to the right */
+        margin-top: 0; /* Adjusts the vertical position */
+       
+        
+    }
+    
+    .services__card:nth-child(5) {
+        background-color: rgb(13, 119, 83);
+        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+        margin-left: 0; /* Shifts 5th card to the right */
+        margin-top: 0; /* Adjusts the vertical position */
+        
+       
+    }
+    
+    .services__card:nth-child(6) {
+        background-color: rgb(13, 119, 83);
+        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
+        margin-left: 0; /* Shifts 5th card to the right */
+        margin-top: 0; /* Adjusts the vertical position */
+       
         
     }
 
