@@ -1,3 +1,14 @@
+.section__title_contacts {
+    color: #fff; /*White text color*/
+}
+
+.contact.container.section {
+    background-color: #2D383D; /* Dark background */
+    padding-bottom: 6.25rem;
+    color: white; /* Ensure text is visible */
+}
+
+
 .contact.section {
     padding-bottom: 6.25rem;
 }
@@ -10,6 +21,8 @@
 .contact__title {
     font-size: var(--h3-font-size);
     margin-bottom: 0.5rem;
+    margin-top: 3rem;
+    color: #fff; /* White text color */
 }
 
 .contact__form-group {
@@ -45,6 +58,42 @@
 .contact-form-area textarea {
     resize: none;
 }
+
+.form-wrapper {
+    position: relative; /* Enables absolute positioning for overlay */
+  }
+  
+  .form-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 56, 61, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
 
 /* Responsive on 1024px */
 @media screen and (max-width: 1024px) {

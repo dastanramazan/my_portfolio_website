@@ -116,8 +116,8 @@ img {
 
 .container {
   max-width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
   /* margin: 0 auto; */ /*The margin: 0 auto; rule centers the container horizontally on the page by setting the left and right margins to auto. This is a common technique for centering block-level elements like divs or sections.*/
 }
 
@@ -128,7 +128,7 @@ img {
 
 .section {
   padding-top: 7rem;
-  padding-bottom: 2rem;
+  padding-bottom: 7rem;
 }
 
 .section__title {
@@ -137,7 +137,9 @@ img {
   font-weight: var(--font-bold);
   position: relative;
   margin-bottom: 3.75rem;
+  
 }
+
 
 .section__title::before {
   content: ''; /*creates an empty pseudo-element that can be styled.*/

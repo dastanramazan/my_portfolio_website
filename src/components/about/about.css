@@ -57,9 +57,9 @@
 .about__boxes {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1.875rem;
-    margin-top: 4.35rem;
+    /* margin-top: 4.35rem; */
     max-width: 1080px;
-    margin: 30px auto ;
+    margin: 50px auto ;
     justify-content: center;
 }
 
@@ -72,7 +72,7 @@
 
 .about__icon {
     font-size: var(--h1-font-size);
-    color: #ed4747;
+    color: #fff;
 }
 
 .about__title {
