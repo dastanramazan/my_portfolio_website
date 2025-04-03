@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion, AnimatePresence } from 'framer-motion';
 import './contact.css';
 
 const Contact = () => {
@@ -14,17 +15,13 @@ const Contact = () => {
       'template_gg53xdk',
       form.current,
       '_rog0EzLsh6n5TU3Q'
-    ).then(
-      () => {
-        setSent(true);
-        form.current.reset();
+    ).then(() => {
+      setSent(true);
+      form.current.reset();
 
-        setTimeout(() => setSent(false), 5000);
-      },
-      () => {
-        alert('Something went wrong.');
-      }
-    );
+      // Optional: Auto hide after 5s
+      // setTimeout(() => setSent(false), 10000);
+    });
   };
 
   return (
@@ -36,7 +33,6 @@ const Contact = () => {
           <h3 className="contact__title">Let's talk about your project!</h3>
         </div>
 
-        {/* Make this container relative for absolute overlay */}
         <div className="form-wrapper">
           <form ref={form} onSubmit={sendEmail} className="action contact__form">
             <div className="contact__form-group">
@@ -63,12 +59,53 @@ const Contact = () => {
             <button type="submit" className="btn">Send Message</button>
           </form>
 
-          {/* Overlay that appears over form */}
-          {sent && (
-            <div className="form-overlay">
-              <p>✅ Your message has been sent!</p>
-            </div>
-          )}
+          {/* Animated Overlay with Dismiss Button */}
+          <AnimatePresence>
+            {sent && (
+              <motion.div
+                className="form-overlay"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                transition={{ duration: 0.4 }}
+              >
+                <button className="close-overlay" onClick={() => setSent(false)}>×</button>
+                {/* ✅ SVG Checkmark Animation */}
+                    <motion.svg
+                      className="checkmark-svg"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 52 52"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <motion.circle
+                        cx="26"
+                        cy="26"
+                        r="25"
+                        stroke="#00ff9d"
+                        strokeWidth="2"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                      />
+                      <motion.path
+                        d="M14 27L22 35L38 19"
+                        stroke="#00ff9d"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
+                      />
+                    </motion.svg>
+
+                
+                <p>Your message has been sent!</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </section>
