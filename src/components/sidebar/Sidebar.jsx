@@ -1,60 +1,47 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./sidebar.css";
-import Logo from "../../assets/logo_wolf.svg" //Logo change
-
+import Logo from "../../assets/logo_wolf.svg";
 
 const Sidebar = () => {
     const [toggle, showMenu] = useState(false);
     return (
         <>
             <aside className={toggle ? "aside show-menu" : "aside" }>
-                <a href="#home" className="nav__logo">
-                    <img src={Logo}  alt="logo" />
-                </a>
-                {/* Left handside panel with icons from the simplelineicons.com*/}
+                <Link to="/" className="nav__logo">
+                    <img src={Logo} alt="logo" />
+                </Link>
                 <nav className="nav">
                     <div className="nav__menu">
                         <ul className="nav__list">
                             <li className="nav__item">
-                                <a href="#home" className="nav__link">
+                                <Link to="/" className="nav__link">
                                     <i className="icon-home"></i>
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav__item">
-                                <a href="#about" className="nav__link">
+                                <Link to="/#about" className="nav__link">
                                     <i className="icon-user-follow"></i>
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav__item">
-                                <a href="#portfolio" className="nav__link">
+                                <Link to="/#portfolio" className="nav__link">
                                     <i className="icon-briefcase"></i>
-                                </a>
+                                </Link>
                             </li>
                             
                             <li className="nav__item">
-                                <a href="#services" className="nav__link">
-                                    <i className="icon-layers "></i>
-                                </a>
+                                <Link to="/#services" className="nav__link">
+                                    <i className="icon-layers"></i>
+                                </Link>
                             </li>
 
-                            {/* <li className="nav__item">
-                                <a href="#resume" className="nav__link">
-                                    <i className="icon-graduation"></i>
-                                </a>
-                            </li> */}
-
-                            {/* <li className="nav__item">
-                                <a href="#blog" className="nav__link">
-                                    <i className="icon-note"></i>
-                                </a>
-                            </li> */}
-
                             <li className="nav__item">
-                                <a href="#contact" className="nav__link">
+                                <Link to="/#contact" className="nav__link">
                                     <i className="icon-bubble"></i>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -64,13 +51,12 @@ const Sidebar = () => {
                     <span className="copyright">The Wolf in the Tech World</span>
                 </div>
             </aside>
-{/* Burger slides to be a menu */}
-            <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={
-                () => showMenu(!toggle) }>
+
+            <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={() => showMenu(!toggle)}>
                 <i className="icon-menu"></i>
             </div>
         </>
     );
 };
 
-export default Sidebar
+export default Sidebar;

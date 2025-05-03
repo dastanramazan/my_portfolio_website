@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./portfolio.css";
 import Menu from "./Menu";
 
@@ -33,11 +34,15 @@ const Portfolio = () => {
             </div>
             <span className="work__category">{category}</span>
             <h3 className="work__title">{title}</h3>
-            <a href={link} className="work__button">
+            <a href={link} className="work__button" target="_blank" rel="noopener noreferrer">
               <i className="icon-link work__button-icon"></i>
             </a>
           </div>
         ))}
+      </div>
+
+      <div className="portfolio__button-container">
+        <Link to="/projects" className="btn">View All Projects</Link>
       </div>
     </section>
   );
