@@ -1,36 +1,21 @@
-.work__filters {
-    display: flex;
-    align-items: center;
-    flex-wrap:  wrap;
-    column-gap: 1.875rem;
-    margin-bottom: 2.5rem;
-}
-
-.work__item {
-    cursor: pointer;
-    font-weight: var(--font-bold);
-    transition: 0.3s;
-}
-
-.work__item:hover {
-    color: var(--first-color);
-}
-
 .work__container {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.875rem;
 }
 
+.work {
+    background-color: #00D7E1;
+}
+
 .work__card {
     position: relative;
-    overflow: hidden;  /*Hide the work__categories*/
+    overflow: hidden;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
 
-/* Create a mask (cover)for the sections */
 .work__mask {
-    background: #464694;
+    background: #6c6ce5;
     position: absolute;
     left: 0;
     top: 0;
@@ -46,8 +31,8 @@
 
 .work__category {
     color: #fff;
-    background-color: var(--first-color);
-    border-bottom-left-radius: 0.98rem; /*applies rounded corners to the bottom left and right of the label */
+    background-color: #6c6ce5;
+    border-bottom-left-radius: 0.98rem;
     border-bottom-right-radius: 0.98rem;
     position: absolute;
     top: 0;
@@ -97,54 +82,42 @@
 .work__card:hover .work__category {
     opacity: 1;
     transform: translateY(0);
-
 }
 
 .portfolio__button-container {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
 }
 
-.portfolio__button-container .btn {
-    padding: 0.75rem 2rem;
-    font-size: var(--normal-font-size);
+.work__img {
+    width: 100%;
+    max-width: 420px;
+    height: 260px;
+    object-fit: fill;
+    object-position: center;
+    transition: .3s;
+    border-radius: var(--border-radius);
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-/* Responsive on 1024px */
+/* Responsive styles */
 @media screen and (max-width: 1024px) {
-    .work__filters {
-        justify-content: center;
-    }
-    
     .work__container {
-        grid-template-columns: repeat(2, 330px);
-        justify-content: center;
-        row-gap: 1.875rem;
-    }
-
-    .timeline__item::before {
-        left: 2px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
-/* Responsive on 768px */
 @media screen and (max-width: 768px) {
     .work__container {
-        grid-template-columns: 310px;
-    }
-
-    .work__filters {
-        row-gap: .25rem;
+        grid-template-columns: 1fr;
     }
 }
 
-/* Responsive on 350px */
 @media screen and (max-width: 350px) {
     .work__container {
         grid-template-columns: 1fr;
-        
     }
-
 }

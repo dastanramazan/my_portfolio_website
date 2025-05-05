@@ -1,32 +1,25 @@
-import React, { useState } from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./portfolio.css";
 import Menu from "./Menu";
 
 const Portfolio = () => {
-  const [items, setItems] = useState(Menu);
-  const [bgColor, setBgColor] = useState("#00D7E1"); // Default background color
-
-  const filterItem = (categoryItem, color) => {
-    const updatedItems = Menu.filter((curElem) => curElem.category === categoryItem);
-    setItems(updatedItems);
-    setBgColor(color); // Change background color based on selection
-  };
+  // Shuffle array and get 6 random projects using Fisher-Yates algorithm
+  const displayedProjects = useMemo(() => {
+    const shuffled = [...Menu];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled.slice(0, 6);
+  }, []); // Empty dependency array means this will only run once when component mounts
 
   return (
-    <section className="work container section" id="portfolio" style={{ backgroundColor: bgColor }}>
+    <section className="work container section" id="portfolio">
       <h2 className="section__title">Projects</h2>
 
-      {/* Filter buttons with color change */}
-      <div className="work__filters">
-        <span className="work__item" onClick={() => { setItems(Menu); setBgColor("#00D7E1"); }}>All</span>
-        <span className="work__item" onClick={() => filterItem("Creative", "#ffcccb")}>Creative</span>
-        <span className="work__item" onClick={() => filterItem("Design", "#add8e6")}>Design</span>
-        <span className="work__item" onClick={() => filterItem("Web Development", "#90ee90")}>Web Development</span>
-      </div>
-
       <div className="work__container grid">
-        {items.map(({ id, image, title, category, link }) => (
+        {displayedProjects.map(({ id, image, title, category, link }) => (
           <div className="work__card" key={id}>
             <div className="work__thumbnail">
               <img src={image} alt="" className="work__img" />
