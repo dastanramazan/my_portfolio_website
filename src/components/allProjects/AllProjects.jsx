@@ -20,7 +20,7 @@ const AllProjects = () => {
     if (categoryValue === null) {
       setItems(Menu);
     } else {
-      setItems(Menu.filter(p => p.category === categoryValue));
+      setItems(Menu.filter(p => Array.isArray(p.category) && p.category.includes(categoryValue)));
     }
     setBgColor(color);
   };
@@ -55,7 +55,7 @@ const AllProjects = () => {
                 <img src={image} alt={title} className="work__img" />
                 <div className="work__mask"></div>
               </div>
-              <span className="work__category">{category}</span>
+              <span className="work__category">{Array.isArray(category) ? category.join(", ") : category}</span>
               <h3 className="work__title">{title}</h3>
               <a
                 href={link}
