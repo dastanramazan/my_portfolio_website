@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.bb7ba334.css",
-    "main.js": "/portfolio/static/js/main.bbdb5f53.js",
+    "main.css": "/portfolio/static/css/main.baeecabf.css",
+    "main.js": "/portfolio/static/js/main.6f985a50.js",
     "static/js/787.128fc6e9.chunk.js": "/portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/myavatar_1.jpg": "/portfolio/static/media/myavatar_1.bf85ef01a9e984ee719b.jpg",
     "static/media/cisco.png": "/portfolio/static/media/cisco.b72a160d031b40c32dff.png",
@@ -23,12 +23,12 @@
     "static/media/logo_wolf.svg": "/portfolio/static/media/logo_wolf.83e076c88ed9f79d5ff72c0ed2f5c7b0.svg",
     "static/media/dots-bg.svg": "/portfolio/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
     "index.html": "/portfolio/index.html",
-    "main.bb7ba334.css.map": "/portfolio/static/css/main.bb7ba334.css.map",
-    "main.bbdb5f53.js.map": "/portfolio/static/js/main.bbdb5f53.js.map",
+    "main.baeecabf.css.map": "/portfolio/static/css/main.baeecabf.css.map",
+    "main.6f985a50.js.map": "/portfolio/static/js/main.6f985a50.js.map",
     "787.128fc6e9.chunk.js.map": "/portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb7ba334.css",
-    "static/js/main.bbdb5f53.js"
+    "static/css/main.baeecabf.css",
+    "static/js/main.6f985a50.js"
   ]
 }
