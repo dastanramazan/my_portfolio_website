@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.44dfb75b.css",
-    "main.js": "/portfolio/static/js/main.54f29165.js",
-    "static/js/787.128fc6e9.chunk.js": "/portfolio/static/js/787.128fc6e9.chunk.js",
+    "main.css": "/portfolio/static/css/main.f030730f.css",
+    "main.js": "/portfolio/static/js/main.29463527.js",
+    "static/js/453.2b426ada.chunk.js": "/portfolio/static/js/453.2b426ada.chunk.js",
     "static/media/myavatar_1.jpg": "/portfolio/static/media/myavatar_1.bf85ef01a9e984ee719b.jpg",
     "static/media/cisco.png": "/portfolio/static/media/cisco.b72a160d031b40c32dff.png",
     "static/media/record.png": "/portfolio/static/media/record.e0e8b0d272e41bb597bf.png",
@@ -13,22 +13,20 @@
     "static/media/micro365.png": "/portfolio/static/media/micro365.2bca251de5aeb553cc62.png",
     "static/media/scality.png": "/portfolio/static/media/scality.ae3ffbdcb587e72f2221.png",
     "static/media/ergonomic.png": "/portfolio/static/media/ergonomic.19488ffccb587dd9b2e0.png",
-    "static/media/me.webp": "/portfolio/static/media/me.a3196ae7d4410b30d845.webp",
     "static/media/Asset 8.webp": "/portfolio/static/media/Asset 8.4958302078b239e68990.webp",
     "static/media/ergo_logo.png": "/portfolio/static/media/ergo_logo.e92e18281c53f1abeecb.png",
-    "static/media/work-3.svg": "/portfolio/static/media/work-3.f1d02dc63be36a2005f8d395ecb8b36c.svg",
     "static/media/avatar-3.svg": "/portfolio/static/media/avatar-3.605f4f9b2d464df4897817a6278e52d7.svg",
     "static/media/avatar-1.svg": "/portfolio/static/media/avatar-1.e18c937d0a33154687422e5da407f480.svg",
     "static/media/Asset_17.webp": "/portfolio/static/media/Asset_17.7f1c30a91dd4e3e5d472.webp",
     "static/media/logo_wolf.svg": "/portfolio/static/media/logo_wolf.83e076c88ed9f79d5ff72c0ed2f5c7b0.svg",
     "static/media/dots-bg.svg": "/portfolio/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
     "index.html": "/portfolio/index.html",
-    "main.44dfb75b.css.map": "/portfolio/static/css/main.44dfb75b.css.map",
-    "main.54f29165.js.map": "/portfolio/static/js/main.54f29165.js.map",
-    "787.128fc6e9.chunk.js.map": "/portfolio/static/js/787.128fc6e9.chunk.js.map"
+    "main.f030730f.css.map": "/portfolio/static/css/main.f030730f.css.map",
+    "main.29463527.js.map": "/portfolio/static/js/main.29463527.js.map",
+    "453.2b426ada.chunk.js.map": "/portfolio/static/js/453.2b426ada.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44dfb75b.css",
-    "static/js/main.54f29165.js"
+    "static/css/main.f030730f.css",
+    "static/js/main.29463527.js"
   ]
 }
