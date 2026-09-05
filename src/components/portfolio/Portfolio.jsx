@@ -2,6 +2,8 @@ import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./portfolio.css";
 import Menu from "./Menu";
+import Reveal from "../common/Reveal";
+import { StaggerGroup, StaggerItem } from "../common/Stagger";
 
 const Portfolio = () => {
   // Shuffle array and get 6 random projects using Fisher-Yates algorithm
@@ -16,11 +18,11 @@ const Portfolio = () => {
 
   return (
     <section className="work container section" id="portfolio">
-      <h2 className="section__title">Projects</h2>
+      <Reveal as="h2" className="section__title">Projects</Reveal>
 
-      <div className="work__container grid">
+      <StaggerGroup className="work__container grid">
         {displayedProjects.map(({ id, image, title, category, link }) => (
-          <div className="work__card" key={id}>
+          <StaggerItem className="work__card" key={id}>
             <div className="work__thumbnail">
               <img src={image} alt="" className="work__img" />
               <div className="work__mask"></div>
@@ -30,9 +32,9 @@ const Portfolio = () => {
             <a href={link} className="work__button" target="_blank" rel="noopener noreferrer">
               <i className="icon-link work__button-icon"></i>
             </a>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
 
       <div className="portfolio__button-container">
         <Link to="/projects" className="btn">View All Projects</Link>

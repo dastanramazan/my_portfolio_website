@@ -8,43 +8,69 @@
     justify-content: space-around; /* Ensures text and photo stay in separate sections */
     flex-direction: row; /* Keeps layout in a row on larger screens */
     padding: 2rem;
-    background-image: url("../../assets/Asset\ 8.webp"); 
-    background-size: cover; 
-    background-position: center; 
+    background-image: url("../../assets/Asset\ 8.webp");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+}
+
+/* Smooth handoff into the About section below, instead of a hard cut
+   from the hero image straight into About's flat background color. */
+.home::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(to bottom, transparent, var(--about-bg));
+    pointer-events: none;
 }
 
 /* Intro text on the left */
 .intro {
+    position: relative; /* so z-index actually applies, keeping this above the gradient fade at the bottom of .home */
     max-width: 50%; /* Restrict width to half of the screen */
     text-align: left; /* Aligns text to the left */
     padding-left: 5rem; /* Pushes text towards the center */
     z-index: 1;
 }
 
-/* My photo on the right */
-.img__container {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: transparent;
+/* Terminal on the right, where the photo used to sit */
+.hero-terminal__container {
+    position: relative; /* keeps the terminal above the gradient fade at the bottom of .home */
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5rem; /* Pushes image towards the right */
-}
-
-/* Ensures image fills the container */
-.img__container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-right: 5rem; /* Mirrors the old photo's offset toward the right */
 }
 
 .home__hi {
     font-size: 40px;
     color: #fff;
+}
+
+.wave-emoji {
+    display: inline-block;
+    transform-origin: 70% 70%;
+    animation: wave 3.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wave-emoji {
+        animation: none;
+    }
 }
 
 .home__education {
@@ -57,6 +83,25 @@
     font-weight: var(--font-bold);
     margin-bottom: 0.5rem;
     color: #fff;
+}
+
+.home__role {
+    display: block;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semibold);
+    color: var(--first-color);
+    margin-bottom: 1rem;
+    min-height: 1.5em;
+}
+
+.typewriter__cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: cursor-blink 0.9s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+    50% { opacity: 0; }
 }
 
 /* Social icons */
@@ -92,10 +137,9 @@
         padding: 0;
     }
 
-    .img__container {
-        width: 250px;
-        height: 250px;
-        margin: 2rem 0 0 0; /* Center the image */
+    .hero-terminal__container {
+        margin: 2rem 0 0 0; /* Center the terminal */
+        width: 100%;
     }
 
     .home__socials {
@@ -111,10 +155,5 @@
 
     .home__social-link {
         font-size: 1.5rem;
-    }
-
-    .img__container {
-        width: 200px;
-        height: 200px;
     }
 }

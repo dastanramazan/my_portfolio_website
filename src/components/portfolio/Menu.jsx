@@ -1,5 +1,4 @@
 import Work1 from "../../assets/activebox.png";
-import Work2 from "../../assets/work-3.svg";
 import Work3 from "../../assets/micro365.png"
 import Work4 from "../../assets/amanat.png";
 import Work5 from "../../assets/ergonomic.png";
@@ -18,16 +17,6 @@ const Menu = [
     category: ["Web Development"],
     link: "https://dastanramazan.github.io/Activebox-website/"
   },
-  {
-    id: 2,
-    image: Work2,
-    title: "Your project can be here",
-    category: ["Creative"],
-    link: "https://your-link-here.com" // Added link for consistency
-  },
-
-  // ————————— New projects below —————————
-
   {
     id: 3,
     image: Work4,

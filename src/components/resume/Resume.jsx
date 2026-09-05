@@ -2,47 +2,49 @@ import React from 'react';
 import "./resume.css";
 import Data from './Data';
 import Card from './Card';
+import Reveal from '../common/Reveal';
+import { StaggerGroup } from '../common/Stagger';
 
 const Resume = () => {
   return (
     <section className="resume container section" id="resume">
-      <h2 className="section__title">Experience</h2>
+      <Reveal as="h2" className="section__title">Experience</Reveal>
 
       <div className="resume__container grid">
 {/* Education */}
-        <div className="timeline grid">
+        <StaggerGroup className="timeline grid">
             {Data.map((val, id) => {
               if(val.category === "education") {
                 return(
-                  <Card 
-                  key={id} 
-                  icon={val.icon} 
-                  title={val.title} 
-                  year={val.year} 
-                  desc={val.desc} 
+                  <Card
+                  key={id}
+                  icon={val.icon}
+                  title={val.title}
+                  year={val.year}
+                  desc={val.desc}
                   />
                 )
               }
               return null;
             })}
-        </div>
+        </StaggerGroup>
 {/* Experience */}
-        <div className="timeline grid">
+        <StaggerGroup className="timeline grid">
             {Data.map((val, index) => {
               if(val.category === "experience") {
                 return(
-                  <Card 
-                  key={index} 
-                  icon={val.icon} 
-                  title={val.title} 
-                  year={val.year} 
-                  desc={val.desc} 
+                  <Card
+                  key={index}
+                  icon={val.icon}
+                  title={val.title}
+                  year={val.year}
+                  desc={val.desc}
                    />
                 )
               }
               return null;
             })}
-        </div>
+        </StaggerGroup>
 
 
 

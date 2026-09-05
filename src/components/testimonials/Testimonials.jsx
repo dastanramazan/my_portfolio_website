@@ -47,22 +47,6 @@ const data = [
     subtitle: "CEO",
     comment:
       "Dastan seamlessly integrated the Boston Amanat Moving website with its CMS, ensuring everything runs flawlessly. He made the whole process fun and engaging. Wishing you all the best! ",
-  },
-  {
-    id: 5,
-    image: Image3,
-    title: "Henrik",
-    subtitle: "CEO of RCOWU",
-    comment:
-      "I enjoy working with the Dastan. He makes the process a lot easier. Thank you for your hard work! 👍",
-  },
-  {
-    id: 6,
-    image: Image2,
-    title: "Ergonomic",
-    subtitle: "CEO of Ergonomic",
-    comment:
-      "Dastan is a true professional Software Engineer with outstanding skills. He deployed my Ergonomic website quickly, efficiently, and exceeded all my expectations. 👍",
   }
 ];
 

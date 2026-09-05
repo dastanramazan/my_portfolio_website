@@ -3,15 +3,17 @@
     gap: 1.875rem;
 }
 
-.work {
-    background-color: #00D7E1;
-}
-
 .work__card {
     position: relative;
     overflow: hidden;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.work__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 16px 28px 0px rgb(69 67 96 / 20%);
 }
 
 .work__mask {
@@ -119,5 +121,20 @@
 @media screen and (max-width: 350px) {
     .work__container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Touch screens have no :hover, so the title/category/link were never
+   reachable there. Show them permanently on devices without real hover. */
+@media (hover: none) {
+    .work__mask {
+        opacity: 0.75;
+    }
+
+    .work__title,
+    .work__category,
+    .work__button {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

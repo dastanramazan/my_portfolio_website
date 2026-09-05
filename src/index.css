@@ -10,8 +10,9 @@
   --first-color: hsl(353, 100%, 65%);
   --title-color: hsl(244, 24%, 26%);
   --text-color: hsl(244, 16%, 43%);
-  /* --body-color: hsl(258, 60%, 98%); */
+  --body-color: hsl(258, 60%, 98%);
   --container-color: #fff;
+  --about-bg: #698591;
 /* This is a CSS code snippet that defines three custom CSS variables using the -- notation. These variables are then assigned to different HSL color values.
 
 The first variable --first-color is assigned a hue of 353 degrees, 100% saturation, and 65% lightness, which creates a bright bluish-green color. This color can be used as a primary color in the design.
@@ -39,6 +40,29 @@ The third variable --text-color is assigned a hue of 244 degrees, 16% saturation
 
   /* =================Border Radius================ */
   --border-radius: 10px;
+}
+
+/* ===============================Dark theme============================== */
+/* Off by default — the site always boots in the light theme above. The
+   toggle button (ThemeToggle.jsx) sets data-theme="dark" only for the
+   current visit, so nothing here changes what a fresh page load looks
+   like. Everything below only takes effect once that attribute is set. */
+/* Body color is the Contact section's own dark background (#2D383D) —
+   the site already has a "correct" dark tone designed in by hand, so
+   reuse it instead of inventing a near-black one. Container is a step
+   lighter than that so cards still read against the page background. */
+:root[data-theme="dark"] {
+  --first-color: hsl(353, 90%, 68%);
+  --title-color: hsl(198, 24%, 92%);
+  --text-color: hsl(198, 12%, 72%);
+  --body-color: hsl(199, 15%, 21%); /* #2D383D, same as .contact.container.section */
+  --container-color: hsl(199, 14%, 28%);
+  --about-bg: hsl(199, 15%, 21%);
+  --shadow: 0px 5px 20px 0px rgb(0 0 0 / 35%);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--body-color);
 }
 
 /* Responsive typography */
@@ -121,6 +145,29 @@ img {
   /* margin: 0 auto; */ /*The margin: 0 auto; rule centers the container horizontally on the page by setting the left and right margins to auto. This is a common technique for centering block-level elements like divs or sections.*/
 }
 
+/* Side padding was fixed at 80px regardless of viewport, which left almost
+   no room for content on phones. Scale it down as the screen narrows. */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .grid {
 
   display: grid;
@@ -129,6 +176,13 @@ img {
 .section {
   padding-top: 7rem;
   padding-bottom: 7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
 }
 
 .section__title {

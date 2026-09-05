@@ -149,18 +149,30 @@
     .work__filters {
         justify-content: center;
     }
-    
+
     .work__container {
         grid-template-columns: repeat(2, 330px);
         justify-content: center;
         row-gap: 1.875rem;
+    }
+
+    /* The fixed sidebar collapses into a hamburger below 1024px. The back
+       button no longer needs to clear its 110px width, but it must clear
+       the hamburger toggle itself so the two don't overlap. */
+    .back-button {
+        top: 5.5rem;
+        left: 1.25rem;
+    }
+
+    .all-projects {
+        padding-top: 9.5rem;
     }
 }
 
 /* RESPONSIVE: 768px */
 @media screen and (max-width: 768px) {
     .work__container {
-        grid-template-columns: 310px;
+        grid-template-columns: 1fr;
     }
 
     .work__filters {
@@ -172,5 +184,20 @@
 @media screen and (max-width: 350px) {
     .work__container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Touch screens have no :hover, so the title/category/link were never
+   reachable there. Show them permanently on devices without real hover. */
+@media (hover: none) {
+    .work__mask {
+        opacity: 0.75;
+    }
+
+    .work__title,
+    .work__category,
+    .work__button {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

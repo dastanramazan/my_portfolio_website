@@ -9,6 +9,10 @@
     background-color: #EBEBEB;
 }
 
+[data-theme="dark"] .testimonials {
+    background-color: var(--body-color);
+}
+
 /* Adjacent of the testimonials */
 .testimonial__item {
     text-align: center;
@@ -40,7 +44,7 @@
 /* put inside the box comments */
 /* Make all comment boxes the same size regardless of content */
 .comment {
-    width: 320px; /* Fixed width for all comment boxes */
+    width: min(320px, 100%); /* Fixed width for all comment boxes, capped to fit narrow screens */
     height: 200px; /* Fixed height for all comment boxes */
     /*overflow-y: auto; /* Scroll if content is too long */
     border-color: var(--container-color);

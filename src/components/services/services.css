@@ -91,22 +91,42 @@
 
 }
 
-/* Only Change the name of 2 card */
+/* Only Change the name of 2 card. Fixed dark navy on purpose (not the
+   --title-color variable): this card's yellow background never changes
+   with the site theme, so the text needs to stay dark for contrast even
+   in dark mode, when --title-color turns light for everything else. */
 .services__card:nth-child(2) .services__title {
-    color: var(--title-color);
+    color: hsl(244, 24%, 26%);
 }
 
 .services__card:nth-child(2) .services__description {
-    color: var(--title-color);
+    color: hsl(244, 24%, 26%);
 }
 
 
-/* Responsive on 1024px */
-@media screen and (max-width: 1024px) {
+/* The desktop honeycomb above is built from fixed 300px cards in a
+   container capped at 40% width — with the row-2 55% shift added on
+   top, that pattern only actually fits without spilling past the edge
+   of the page once the viewport is >= ~1400px (worked back from the
+   40%/55% math and confirmed by measuring the overflow at several
+   widths). Below that, use the same clean 2-per-row grid as tablets so
+   nothing runs off-screen; the >=1400px desktop layout itself is
+   unchanged. */
+@media screen and (max-width: 1399px) {
     .services__container {
         grid-template-columns: repeat(2, 330px);
         justify-content: center;
         row-gap: 1.875rem;
+    }
+
+    /* The desktop honeycomb shift (margin-left: 55%; margin-top: -70px)
+       was never reset here, so on tablets cards 4-6 floated between rows
+       instead of lining up in the 2-column grid. Two per row, in line. */
+    .services__card:nth-child(4),
+    .services__card:nth-child(5),
+    .services__card:nth-child(6) {
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 
@@ -117,31 +137,16 @@
         grid-template-columns: 310px;
     }
 
-    .services__card:nth-child(4) {
-        background-color: rgb(13, 119, 83);
-        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
-        margin-left: 0; /* Shifts 5th card to the right */
-        margin-top: 0; /* Adjusts the vertical position */
-       
-        
-    }
-    
-    .services__card:nth-child(5) {
-        background-color: rgb(13, 119, 83);
-        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
-        margin-left: 0; /* Shifts 5th card to the right */
-        margin-top: 0; /* Adjusts the vertical position */
-        
-       
-    }
-    
+    /* Cards 4-6 used to be force-repainted the same green here (and at
+       350px below), hiding card 5's cyan and tinting card 6's logo green
+       through its transparent background. Just keep their own desktop
+       colors (already set by the nth-child rules above) and reset the
+       position shift for the single-column layout. */
+    .services__card:nth-child(4),
+    .services__card:nth-child(5),
     .services__card:nth-child(6) {
-        background-color: rgb(13, 119, 83);
-        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
-        margin-left: 0; /* Shifts 5th card to the right */
-        margin-top: 0; /* Adjusts the vertical position */
-       
-        
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 
@@ -149,36 +154,7 @@
 @media screen and (max-width: 350px) {
     .services__container {
         grid-template-columns: 1fr;
-        
     }
-
-    .services__card:nth-child(4) {
-        background-color: rgb(13, 119, 83);
-        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
-        margin-left: 0; /* Shifts 5th card to the right */
-        margin-top: 0; /* Adjusts the vertical position */
-       
-        
-    }
-    
-    .services__card:nth-child(5) {
-        background-color: rgb(13, 119, 83);
-        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
-        margin-left: 0; /* Shifts 5th card to the right */
-        margin-top: 0; /* Adjusts the vertical position */
-        
-       
-    }
-    
-    .services__card:nth-child(6) {
-        background-color: rgb(13, 119, 83);
-        box-shadow: 0px 5px 20px 0px rgb(249, 123, 139 / 50%);
-        margin-left: 0; /* Shifts 5th card to the right */
-        margin-top: 0; /* Adjusts the vertical position */
-       
-        
-    }
-
 }
 
 

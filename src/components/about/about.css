@@ -1,6 +1,6 @@
 .about {
-    background-color: #698591;
-    
+    position: relative;
+    background-color: var(--about-bg);
 }
 
 .about__container {
@@ -132,8 +132,8 @@
   /* Responsive on 576px */
   @media screen and (max-width: 576px) {
     .about__container {
-        grid-template-columns: 320px;
-        
+        grid-template-columns: 1fr;
+
     }
 
 }
@@ -149,4 +149,19 @@
         grid-template-columns: 1fr;
     }
 
+}
+
+/* Dark theme: these colors are hardcoded hex rather than the --title-color
+   / --about-bg variables, so they need explicit overrides. .about itself
+   now reads --about-bg directly (see above), which already flips dark. */
+[data-theme="dark"] .about__description,
+[data-theme="dark"] .about__box,
+[data-theme="dark"] .about__title {
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 1024px) {
+    [data-theme="dark"] .about__data::before {
+        border-bottom-color: var(--container-color);
+    }
 }

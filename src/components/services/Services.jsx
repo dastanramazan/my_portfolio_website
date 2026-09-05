@@ -3,6 +3,8 @@ import "./services.css";
 import Asset17 from '../../assets/Asset_17.webp';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode, faPalette, faPenNib, faCogs, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import Reveal from "../common/Reveal";
+import { StaggerGroup, StaggerItem } from "../common/Stagger";
 
 const data = [
   { 
@@ -44,20 +46,20 @@ const data = [
 const Services = () => {
   return (
     <section className="services container section" id="services">
-      <h2 className="section__title">Services</h2>
-      <div className="services__container grid">
+      <Reveal as="h2" className="section__title">Services</Reveal>
+      <StaggerGroup className="services__container grid">
         {data.map(({ id, icon, title, description, image }) => (
-          <div
+          <StaggerItem
             className="services__card"
             key={id}
             style={id === 6 ? { backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
           >
-            <FontAwesomeIcon icon={icon} className="services__icon" />
-            <h3 className="services__title">{title}</h3>
-            <p className="services__description">{description}</p>
-          </div>
+            {icon && <FontAwesomeIcon icon={icon} className="services__icon" />}
+            {title && <h3 className="services__title">{title}</h3>}
+            {description && <p className="services__description">{description}</p>}
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
     </section>
   );
 };

@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import Sidebar from './components/sidebar/Sidebar';
+import ThemeToggle from './components/common/ThemeToggle';
+import ChatWidget from './components/chat/ChatWidget';
 import Home from './components/home/Home';
 import About from './components/about/About';
+import Resume from './components/resume/Resume';
 import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonials';
@@ -12,7 +16,7 @@ import AllProjects from './components/allProjects/AllProjects';
 
 const ScrollToAnchor = () => {
   const location = useLocation();
-  
+
   React.useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
@@ -32,6 +36,7 @@ const MainContent = () => (
     <ScrollToAnchor />
     <Home />
     <About />
+    <Resume />
     <Portfolio />
     <Services />
     <Testimonials />
@@ -39,20 +44,42 @@ const MainContent = () => (
   </>
 );
 
+const PageTransition = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -12 }}
+    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+  >
+    {children}
+  </motion.div>
+);
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageTransition><MainContent /></PageTransition>} />
+        <Route path="/projects" element={<PageTransition><AllProjects /></PageTransition>} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
 const App = () => {
   return (
     <>
       <Sidebar />
+      <ThemeToggle />
       <main className='main'>
-        <Routes>
-          <Route path="/" element={<MainContent />} />
-          <Route path="/projects" element={<AllProjects />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
+        <AnimatedRoutes />
       </main>
+      <ChatWidget />
     </>
   );
 }
 
 export default App;
-

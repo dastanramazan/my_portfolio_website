@@ -1,52 +1,50 @@
 import React from 'react'
-
+import Counter from '../common/Counter';
+import { StaggerGroup, StaggerItem } from '../common/Stagger';
 
 const AboutBox = () => {
   return (
-    <div className="about__boxes grid">
-        
+    <StaggerGroup className="about__boxes grid">
+
 {/* Project completed */}
-        <div className="about__box">
+        <StaggerItem className="about__box">
             <i className="about__icon icon-fire"></i>
 
             <div>
-                <h3 className="about__title">15+</h3>
+                <Counter className="about__title" value={15} suffix="+" />
                 <span className="about__subtitle">Project completed</span>
             </div>
-        </div>
+        </StaggerItem>
 {/* Cup of Coffee */}
-        <div className="about__box">
+        <StaggerItem className="about__box">
             <i className="about__icon icon-cup"></i>
 
             <div>
-                <h3 className="about__title">5670</h3>
+                <Counter className="about__title" value={5670} />
                 <span className="about__subtitle">Cup of Coffee</span>
             </div>
-        </div>
+        </StaggerItem>
 {/* Satisfied clients */}
-        <div className="about__box">
+        <StaggerItem className="about__box">
             <i className="about__icon icon-people"></i>
 
             <div>
-                <h3 className="about__title">10+</h3>
+                <Counter className="about__title" value={10} suffix="+" />
                 <span className="about__subtitle">Satisfied clients </span>
             </div>
-        </div>
+        </StaggerItem>
 
-{/* Nominees winner */}
-        <div className="about__box">
+{/* Years of experience */}
+        <StaggerItem className="about__box">
             <i className="about__icon icon-badge"></i>
 
             <div>
-                <h3 className="about__title">12+</h3>
+                <Counter className="about__title" value={12} suffix="+" />
                 <span className="about__subtitle">years of experience</span>
             </div>
-        </div>
+        </StaggerItem>
 
-
-           
-
-    </div>
+    </StaggerGroup>
 
   )
 }
